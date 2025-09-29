@@ -9,6 +9,7 @@ import BudgetRecommender from './components/BudgetRecommender';
 import NewsUpdate from './components/NewsUpdate';
 import InvestmentRecommendation from './components/InvestmentRecommendation';
 import AddTransactionModal from './components/AddTransactionModal';
+import GoalPlanner from './components/GoalPlanner';
 
 const FinancialAdvisorApp = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -216,9 +217,7 @@ const FinancialAdvisorApp = () => {
           />
         )}
         {activeTab === 'budget' && (
-          <BudgetRecommender 
-            stats={stats}
-            getBudgetRecommendations={getBudgetRecommendations}
+          <GoalPlanner 
           />
         )}
         {activeTab === 'news' && <NewsUpdate />}
