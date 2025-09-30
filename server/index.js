@@ -17,13 +17,8 @@ mongoose.connect(process.env.MONGO_URI, {
 .then(() => console.log("MongoDB Connected"))
 .catch((err) => console.log(err));
 
-// Routes
-app.get("/", (req, res) => {
-  res.send("Server is running 🚀");
-});
-app.get("/api", (req, res) => {
-  res.send("Hello from Express backend!");
-});
+// server.js
+
 
 
 const PORT = process.env.PORT || 5000;
