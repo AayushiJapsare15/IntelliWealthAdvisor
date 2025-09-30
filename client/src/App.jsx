@@ -10,7 +10,7 @@ import NewsUpdate from './components/NewsUpdate';
 import InvestmentRecommendation from './components/InvestmentRecommendation';
 import AddTransactionModal from './components/AddTransactionModal';
 import GoalPlanner from './components/GoalPlanner';
-
+import Investment from './components/Recommender';
 const FinancialAdvisorApp = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activeTab, setActiveTab] = useState('dashboard');
@@ -222,7 +222,7 @@ const FinancialAdvisorApp = () => {
         )}
         {activeTab === 'news' && <NewsUpdate />}
         {activeTab === 'investment' && (
-          <InvestmentRecommendation stats={stats} />
+          <Investment stats={stats} balance={stats.balance} />
         )}
       </main>
 
